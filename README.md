@@ -45,7 +45,7 @@ Take care to have the following structure, otherwise it'll not work
               │       │   └───aws-advanced-jdbc-wrapper.jar
 ```
 
-Then, create a datasource in Wildfly. Example:
+Then, create a datasource in Wildfly. For that, you've to open CLI `./wildfly/bin/jboss-cli.sh -c` and copy/paste the following (with your adaptions):
 
 ```bash
 /subsystem=datasources/jdbc-driver=aws-wrapper:add(driver-module-name=software.amazon.jdbc,driver-name=aws-wrapper,driver-class-name=software.amazon.jdbc.Driver)
