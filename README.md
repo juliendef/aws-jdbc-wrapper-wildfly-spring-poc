@@ -6,7 +6,7 @@ Using Java 8, Spring 2.1.3, Wildfly 26.1.1, MySQL 8.0.33 and AWS advanced JDBC w
 
 Crappy code, just for testing purposes.
 
-## Wildfly
+## Wildfly locally
 
 [Install Wildfly locally]( https://www.wildfly.org/get-started/), for this POC we are using Wildfly 26.1.1.Final.
 It is the latest version at this time compatible with Java 8 (max Java 17).
@@ -80,3 +80,24 @@ Get the `.war` file at `target/aws-wrapper-wildfly.war` and deploy it.
 ## Test the application
 
 When testing the Application against RDS, use SSM to port forward the RDS instance to your local machine.
+
+## Wildfly on Docker
+
+Set up your `.env` file based on the `.env.example` file. It must correspond to your RDS connection with the 
+needed JDBC parameters.
+
+Then, build the `.war` artefact with the following command:
+
+```bash
+./mvnw clean package
+```
+
+Run the following command to start the Wildfly container:
+
+```bash
+docker-compose build && docker-compose up
+```
+
+> [!IMPORTANT]
+> I'm using another customer base image for Wildfly, for the sake of simplicity, the image
+> `jboss/wildfly:10.1.0.Final` is used. You can change it to any image if you want.

@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  aws-wrapper-wildfly:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: aws-wrapper-wildfly
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_URL: ${DB_URL}
+    ports:
+      - 9010:8080 # Application port
+      - 9990:9990 # JBoss management port

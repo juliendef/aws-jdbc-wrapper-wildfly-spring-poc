@@ -20,3 +20,5 @@ target/
 *.ipr
 .vscode/
 .idea/
+
+.env

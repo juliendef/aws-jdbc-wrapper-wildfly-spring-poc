@@ -1,0 +1,12 @@
+/subsystem=datasources/jdbc-driver=aws-wrapper:add(driver-module-name=software.amazon.jdbc,driver-name=aws-wrapper,driver-class-name=software.amazon.jdbc.Driver)
+
+/subsystem=datasources/data-source=MyPool:add(jndi-name=java:jboss/datasources/MyPool, driver-name="aws-wrapper", connection-url="${env.DB_URL}")
+/subsystem=datasources/data-source=MyPool:write-attribute(name=user-name, value=${env.DB_USER})
+/subsystem=datasources/data-source=MyPool:write-attribute(name=password, value=${env.DB_PASSWORD})
+/subsystem=datasources/data-source=MyPool:write-attribute(name=validate-on-match, value=true)
+/subsystem=datasources/data-source=MyPool:write-attribute(name=valid-connection-checker-class-name, value="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker")
+/subsystem=datasources/data-source=MyPool:write-attribute(name=exception-sorter-class-name, value="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter")
+/subsystem=datasources/data-source=MyPool:write-attribute(name=min-pool-size, value=5)
+/subsystem=datasources/data-source=MyPool:write-attribute(name=max-pool-size, value=10)
+/subsystem=datasources/data-source=MyPool:write-attribute(name=pool-prefill, value=true)
+/subsystem=datasources/data-source=MyPool:write-attribute(name=idle-timeout-minutes, value=10)
