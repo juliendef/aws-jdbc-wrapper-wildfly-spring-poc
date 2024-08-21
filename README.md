@@ -2,13 +2,13 @@
 
 POC for using AWS advanced JDBC wrapper with Wildfly datasource. 
 
-Using Java 8, Spring 2.1.3, Wildfly 26.1.1, MySQL 8.0.33 and AWS advanced JDBC wrapper 2.3.7.
+Using Java 8, Spring 2.1.3, Wildfly 10.1.0, MySQL 8.0.33 and AWS advanced JDBC wrapper 2.3.7.
 
 Crappy code, just for testing purposes.
 
 ## Wildfly locally
 
-[Install Wildfly locally]( https://www.wildfly.org/get-started/), for this POC we are using Wildfly 26.1.1.Final.
+[Install Wildfly locally](https://www.wildfly.org/get-started/), for this POC we are using Wildfly 26.1.1.Final.
 It is the latest version at this time compatible with Java 8 (max Java 17).
 
 Run wildfly with the following command:
