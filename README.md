@@ -2,7 +2,7 @@
 
 POC for using AWS advanced JDBC wrapper with Wildfly datasource. 
 
-Using Java 8, Spring 2.1.3, Wildfly 10.1.0, MySQL 8.0.33 and AWS advanced JDBC wrapper 2.3.7.
+Using Java 8, Spring 2.1.3, Wildfly 10.1.0, MySQL 8.0.33 and AWS advanced JDBC wrapper 2.3.9.
 
 Crappy code, just for testing purposes.
 

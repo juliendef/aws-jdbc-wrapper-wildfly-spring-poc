@@ -1,0 +1,4 @@
+/subsystem=logging/console-handler=CONSOLE:write-attribute(name=level, value=TRACE)
+
+/subsystem=logging/logger=org.jboss.tm:add(level=DEBUG)
+/subsystem=logging/logger=com.arjuna:add(level=TRACE)
